@@ -1,6 +1,6 @@
 @extends('layouts.main2')
 
-{{-- Navbar --}}
+<!-- {{-- Navbar --}}
 <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Mai Boutique</a>
@@ -28,7 +28,7 @@
       </div>
     </div>
 </nav>
-  {{-- Akhir Navbar --}}
+  {{-- Akhir Navbar --}} -->
 
 @section('container')
 
@@ -48,12 +48,12 @@
               <hr style="border-width:10px">
               <div class="d-grid gap-2 d-md-block">
                 <p class="card-text">Qty: 1</p>
-                <div class="d-grid gap-2 d-md-block">
-                    <button class="btn btn-white" type="button">1</button>
-                    <button class="btn btn-success mb-2" type="button">Update Cart</button>
+                <div class="row mb-3">
+                    <button class="btn btn-white" type="button" data-toggle="collapse">1</button>
+                    <button class="btn btn-success mb-2 btn-block" type="button" data-toggle="collapse">Update Cart</button>
                 </div>
-                    <a href="{{ url('cart', $cart->id) }}" class="btn btn-primary"> Back</a>
-                {{-- <a href="#" class="btn btn-danger">Remove from Cart</a> --}}
+                    <a href="{{ url('cart', $cart->id) }}" class="btn btn-danger"> Back</a>
+                {{-- <a href="/#" class="btn btn-danger">Remove from Cart</a> --}}
                 {{-- <button class="btn btn-danger" type="button">Delete Item</button> --}}
               </div>
             </div>

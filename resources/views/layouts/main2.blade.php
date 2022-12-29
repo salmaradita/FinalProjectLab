@@ -10,7 +10,7 @@
   <body>
     <div style="background-color: white">
 
-        {{-- @include('partials.navbar') --}}
+        @include('partials.navbar2')
 
         <div class="container">
             @yield('container')

@@ -1,6 +1,6 @@
 @extends('layouts.main2')
 
-{{-- Navbar --}}
+<!-- {{-- Navbar --}}
 <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Mai Boutique</a>
@@ -28,7 +28,7 @@
       </div>
     </div>
 </nav>
-  {{-- Akhir Navbar --}}
+  {{-- Akhir Navbar --}} -->
 
 @section('container')
 
@@ -45,8 +45,9 @@
                 <h5 class="card-title"><strong>{{ $cart->name }}</strong></h5>
                 <p class="card-text w-full">{{ $cart->price  }}</p>
                 <p class="card-text">Qty: 1</p>
-                <a href="{{ url('detail_cart', $cart->id) }}" class="btn btn-primary mb-2"> Edit Cart</a>
-                <a href="#" class="btn btn-danger">Remove from Cart</a>
+                  <a href="{{ url('detail_cart', $cart->id) }}" class="btn btn-primary" data-toogle="collapse"> Edit Cart</a>
+                <a href="#" class="btn btn-danger" data-toggle="collapse">Remove from Cart</a>
+                
               </div>
             </div>
           </div>

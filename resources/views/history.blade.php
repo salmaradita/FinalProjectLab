@@ -1,6 +1,6 @@
 @extends('layouts.main2')
 
-{{-- Navbar --}}
+<!-- {{-- Navbar --}}
 <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Mai Boutique</a>
@@ -28,7 +28,7 @@
       </div>
     </div>
 </nav>
-  {{-- Akhir Navbar --}}
+  {{-- Akhir Navbar --}} -->
 
 @section('container')
     <h1 class="text-center mt-3 mb-3">Check What You've Bought!</h1>
