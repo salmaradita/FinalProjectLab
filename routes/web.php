@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,11 +21,14 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', function () {
+Route::get('/cover', function () {
     return view('landing');
 });
 
-Route::get('/home', [HomeController::class, 'home'])->name('home');
+Route::middleware(['auth', 'ceklevel:admin,customer'])->group(function () {
+    Route::get('/home', [HomeController::class, 'home'])->name('home');
+});
+
 Route::get('/detail_product/{id}', [HomeController::class, 'detailproduct'])->name('detailproduct');
 Route::get('/cart', [CartController::class, 'cart'])->name('cart');
 Route::get('/detail_cart/{id}', [CartController::class, 'detailcart'])->name('detailcart');
@@ -35,4 +40,11 @@ Route::get('/history', function () {
 Route::get('/profile', function () {
     return view('profile');
 });
+Route::post('/login', [LoginController::class, 'authentichate']);
 
+
+Auth::routes();
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
