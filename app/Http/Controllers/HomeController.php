@@ -7,10 +7,15 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function home()
     {
         $homes = Home::all();
-        return view('Home', compact('homes'));
+        return view('home', compact('homes'));
     }
 
     public function detailproduct($id)
@@ -19,5 +24,8 @@ class HomeController extends Controller
         return view('detail_product', compact('home'));
     }
 
+    // public function index()
+    // {
+    //     return view('home');
+    // }
 }
-
