@@ -40,7 +40,8 @@ Route::get('/history', function () {
 Route::get('/profile', function () {
     return view('profile');
 });
-Route::post('/login', [LoginController::class, 'authentichate']);
+// Route::post('/login', [LoginController::class, 'index']);
+// Route::post('/register', [RegisterController::class, 'index']);
 
 
 Auth::routes();
